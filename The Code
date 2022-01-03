@@ -1,0 +1,63 @@
+# SimpleCalculator
+C# Calculator (Simple with + ,- ,* ,/)
+______________________________________
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Calculator
+{
+    class Program
+    {
+
+        static void Main(string[] args)
+        {
+            SimpleCalculator();
+            Console.ReadKey();
+        }
+        public static string SimpleCalculator()
+        {
+            Console.WriteLine("First number:");
+             string numb1 = Console.ReadLine();
+
+
+            Console.WriteLine("have to '+'  '-'  '*'  '/' ?");
+            string operator1 = Console.ReadLine();
+
+
+            Console.WriteLine("Second number:");
+            string numb2 = Console.ReadLine();
+
+
+            Console.WriteLine(" ");
+            Calculate(numb1, numb2,operator1);
+            return null; ;
+        }
+        static string Calculate(string numb1, string numb2, string operator1)
+        {
+            if (operator1 == "+")
+            {
+                int result = Int32.Parse(numb1) + Int32.Parse(numb2);
+                Console.WriteLine("Result: " + result);
+            }
+            if (operator1 == "-")
+            {
+                int result = Int32.Parse(numb1) - Int32.Parse(numb2);
+                Console.WriteLine("Result: " + result);
+            }
+            if (operator1 == "/")
+            {
+                int result = Int32.Parse(numb1) / Int32.Parse(numb2);
+                Console.WriteLine("Result: " + result);
+            }
+            if (operator1 == "*")
+            {
+                int result = Int32.Parse(numb1) * Int32.Parse(numb2);
+                Console.WriteLine("Result: " + result);
+            }
+            return null;
+        }
+    }
+}
